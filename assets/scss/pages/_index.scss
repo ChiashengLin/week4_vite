@@ -1,0 +1,335 @@
+.btn{
+    border:none;
+    cursor: pointer;
+}
+
+body {
+    font-family: Noto Sans TC, "Roboto" ;
+    /* 英文字型放前面才不會被中文字型影響 */
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width:992px) {
+    .pl-24{
+        padding-left:12px;
+    }
+    .pr-24{
+        padding-right:12px;
+    }
+ }
+
+.h1{
+    font-size: 64px;
+    @include mobile{
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 576px){
+    .sub-title{
+        font-size: 16px;
+        line-height: 24px; 
+    }
+}
+
+.h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #650300;
+}
+
+.w-50{
+    width: 50%;
+}
+
+@media (max-width:992px) {
+    .classicList{
+        display:block;
+    }
+    .classic-li{
+        margin: auto;
+        margin-bottom: 24px;
+    }
+    .classicList .mw-50{
+        max-width: 50%;
+    }
+ }
+ .container{
+    max-width:1320px;/* 1296寬+12*2內距 */
+    margin:0 auto;
+    padding: 0 12px;
+    @include tablet{
+        max-width: 720px;/* 12欄*36+24間距*11+12*2內距 */ 
+        padding: 0;
+    }
+    @include mobile{
+        max-width: 372px;/* 4欄*69+24間距*3+12*2內距 */
+    }
+}
+
+ .container-md-fliud{
+    max-width:1320px;
+    margin:0 auto;
+    padding: 0 12px;
+ }
+
+ .container-sm-fliud{
+    max-width:1320px;
+    margin:0 auto;
+    padding: 0 12px;
+ }
+
+
+
+.container-bn{
+    max-width:1296px;
+    margin-right: 8%;
+}
+
+.container-form{
+    max-width:636px;
+    margin: auto;
+    padding: 0 12px;
+}
+
+.nav img{
+    width:80px;
+    height:48px;
+}
+
+.logo{
+    margin: 16px 15px;
+}
+
+.category{
+    li{
+        padding:25px 30px;
+        color:#fff;
+    }
+    a{
+        color: #fff;
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px){
+    .category{
+        flex-wrap: wrap;
+    }
+
+    .category li{
+        padding:12px 0;
+        text-align: center;
+        width: 50%;
+        border: 1px solid white;
+    }
+
+    .h1{
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 8px;
+    }
+
+    .sub-title{
+        font-size: 16px;
+        line-height: 24px; 
+    }
+}
+
+@media (max-width:576px) {
+    .indexTitle {
+        margin-bottom: 24px;
+    }
+}
+
+.banner{
+    &-wrapper{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+.banner {
+    background-image: url('../images/home-header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(100vh - 80px); /* 想讓背景圖稱滿整個畫面-header的高度 */
+    @include tablet{
+        background-image: url('../images/home-header-sm.png');
+    }
+    @include mobile{
+        height: calc(100vh - 450px);
+    }
+}
+
+@media (max-width:576px) {
+    .feature{
+        margin-top: 40px;
+    }
+}
+
+.featureList {
+    .cardHeader {
+        margin-bottom: 8px;
+        img {
+            width: 83px;
+        }
+    }
+}
+
+.indexTitle {
+    font-size: 48px;
+    @include mobile{
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 32px;
+    }
+}
+
+.coBrand{
+    background-image: url('../images/index-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.cardImg{
+    &-01{
+        background-image: url('../images/home-section4-1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 240px;
+    }
+
+    &-02{
+        background-image: url('../images/home-section4-2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 240px;
+    }
+}
+
+@media (max-width:576px) {
+    .coBrandList{
+        flex-direction: column;
+    }
+
+    .cardImg-01{
+        background-image: url('../images/home-section4-1-sm.png');
+    }
+    
+    .cardImg-02{
+        background-image: url('../images/home-section4-2-sm.png');
+    }
+}
+
+.rcm {
+    .card{
+        height: 511px;
+        border: 1px solid #DEE2E6;
+        box-shadow: 0px 2px #00000029;
+        border-radius: 4px 4px 4px 4px;
+        @include tablet{
+
+        }
+    }
+    .text{
+        text-align: left;
+        padding-left: 16px;
+    }
+}
+
+.customerList{
+    flex-wrap: wrap;
+}
+
+.rcm > p{
+    height: 72px;
+    margin-bottom: 48px;
+}
+
+.form{
+    .input{
+        width:100%;
+        height: 33px;
+        border: 1px solid #000000;
+    }
+}
+
+.checkbox{
+    width:24px;
+}
+
+input::placeholder{
+    opacity: 0.5;
+}
+
+.form {
+    button{
+        padding: 16px 176px;
+        @include mobile{
+            padding: 16px 142px;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .social{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.social {
+    img{
+        width: 40px;
+        height: 40px;
+        margin-right: 32px;
+        @include tablet{
+            margin-right: 18px;
+        }
+        @include mobile{
+            width: 24px;
+            height: 24px;
+            margin-right:8px;
+        }
+    }
+}
+
+
+
+@media (max-width:992px) {
+    .col-md-6 {
+        max-width: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width:576px) {
+    .col-sm-12 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width:576px) {
+    .featureList, .classicList{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:767px) {
+    .w-md-100 {
+        width: 100%;
+    }
+}
+

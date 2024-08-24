@@ -1,0 +1,10 @@
+.header {
+    .container{
+        flex-wrap: wrap;
+        @include mobile{
+            max-width: 100%;
+            display: block;
+            padding: 0;
+        }
+    }
+}
